@@ -54,6 +54,7 @@ composer require khalyomede/array-get:0.*
 - [Example 1: get a value from a key](#example-1-get-a-value-from-a-key)
 - [Example 2: get a value from an indexed key](#example-2-get-a-value-from-an-indexed-key)
 - [Example 3: get values from a nested key](#example-3-get-values-from-a-nested-key)
+- [Example 4: use OOP style](#example-4-use-oop-style)
 
 ### Example 1: get a value from a key
 
@@ -158,4 +159,22 @@ $array = [
 $ordered_at = array_get($array, 'orders.*.product.name');
 
 var_dump($ordered_at); // ["Huawei P20", "Powerbank Tesla"]
+```
+
+### Example 4: use OOP style
+
+```php
+require __DIR__ . '/../vendor/autoload.php';
+
+use Khalyomede\Arr;
+
+$array = [
+  'firstname' => 'John',
+  'lastname' => 'Doe',
+  'orders' => []
+];
+
+$firstname = (new Arr($array))->get('firstname');
+
+var_dump($firstname); // "John"
 ```
