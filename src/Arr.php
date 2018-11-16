@@ -12,9 +12,9 @@ use OutOfBoundsException;
  * 
  * @author Khalyomede <Khalyomede@gmail.com>
  * 
- * @license https://github.com/khalyomede/array-get/src/LICENCE MIT
+ * @license https://github.com/khalyomede/array-get/blob/master/LICENCE MIT
  * 
- * @link https://github.com/khalyomede/array-get/src/Arr.php
+ * @link https://github.com/khalyomede/array-get/blob/master/src/Arr.php
  */
 class Arr
 {
