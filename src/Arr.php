@@ -97,6 +97,12 @@ class Arr
                 $value = [];
 
                 foreach ($array as $item) {
+                    if( is_array($item) === false ) {
+                        $instance->keys[] = $otherKeysList[0];
+
+                        throw new OutOfBoundsException("Undefined offset: {$instance->_key()}");
+                    }
+
                     array_push($value, static::_traverse($instance, $item, $otherKeys));
                 }
 
@@ -112,6 +118,12 @@ class Arr
             } else {
                 if (isset($array[$firstKey]) === true) {
                     $value = $array[$firstKey];
+
+                    if (is_array($value) === false) {
+                        $instance->keys[] = $otherKeysList[0];
+
+                        throw new OutOfBoundsException("Undefined offset: {$instance->_key()}");
+                    }
 
                     return static::_traverse($instance, $value, $otherKeys);
                 } else {
