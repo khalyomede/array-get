@@ -115,7 +115,7 @@ $array = [
   ]
 ];
 
-$ordered_at = array_get($array, 'orders.1.order_at');
+$ordered_at = array_get($array, 'orders.1.ordered_at');
 
 var_dump($ordered_at); // "2018-11-16 22:13:04"
 ```
