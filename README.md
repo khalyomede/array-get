@@ -2,6 +2,11 @@
 
 Function to traverse an array using dot and star syntax. Inspired by [Laravel](https://laravel.com) Validator class.
 
+
+
+![PHP from Packagist](https://img.shields.io/packagist/php-v/khalyomede/array-get.svg) ![Packagist](https://img.shields.io/packagist/v/khalyomede/array-get.svg) ![Codeship](https://img.shields.io/codeship/4b0928b0-cc1d-0136-7e9d-7e574d5ffb69.svg) ![Packagist](https://img.shields.io/packagist/l/khalyomede/array-get.svg)
+
+
 ```php
 $array = [
   'firstname' => 'John',
