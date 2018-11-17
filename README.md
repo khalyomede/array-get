@@ -45,6 +45,7 @@ var_dump( array_get($array, 'orders.*.product.name') ) // ["Huawei P20", "Powerb
 ## Requirements
 
 - [PHP](https://secure.php.net/)
+- [Composer](https://getcomposer.org/)
 
 ## Installation
 
