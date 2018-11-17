@@ -44,6 +44,8 @@ var_dump( array_get($array, 'orders.*.product.name') ) // ["Huawei P20", "Powerb
 
 ## Requirements
 
+- [PHP](https://secure.php.net/)
+
 ## Installation
 
 In your project directory:
