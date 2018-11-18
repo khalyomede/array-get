@@ -80,7 +80,7 @@ class Arr
         if (count($keys) === 1) {
             if ($firstKey === '*') {
                 return $array;
-            } else if (isset($array[$firstKey])) {
+            } else if (array_key_exists($firstKey, $array) === true) {
                 return $array[$firstKey];
             } else {
                 $instance->keys[] = $firstKey;
@@ -108,7 +108,7 @@ class Arr
 
                 return $value;
             } else if (is_numeric($firstKey) === true && is_int((int) $firstKey) === true) {
-                if (isset($array[$firstKey]) === true) {
+                if (array_key_exists($firstKey, $array) === true) {
                     $value = $array[$firstKey];
 
                     return static::_traverse($instance, $value, $otherKeys);
@@ -116,7 +116,7 @@ class Arr
                     throw new OutOfBoundsException("Undefined offset: {$instance->_key()}");
                 }
             } else {
-                if (isset($array[$firstKey]) === true) {
+                if (array_key_exists($firstKey, $array) === true) {
                     $value = $array[$firstKey];
 
                     if (is_array($value) === false) {
