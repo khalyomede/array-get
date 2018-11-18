@@ -42,6 +42,10 @@ class ArrTest extends TestCase
                     ]
                 ],
                 static::ORDER_2
+            ],
+            'address' => [
+                'mail' => null,
+                'email' => 'john.doe@example.com'
             ]
         ]);
 
@@ -99,6 +103,11 @@ class ArrTest extends TestCase
     public function testAccessAllKeysByStar() 
     {
         $this->assertEquals($this->arr2->get('*'), [static::FIRST_JOB, static::SECOND_JOB]);
+    }
+
+    public function testAccessNullKey()
+    {
+        $this->assertNull($this->arr->get('address.mail'));
     }
 
     public function testAccessUndefinedKey()
