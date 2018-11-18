@@ -97,7 +97,7 @@ class Arr
                 $value = [];
 
                 foreach ($array as $item) {
-                    if( is_array($item) === false ) {
+                    if (is_array($item) === false) {
                         $instance->keys[] = $otherKeysList[0];
 
                         throw new OutOfBoundsException("Undefined offset: {$instance->_key()}");
